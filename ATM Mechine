@@ -1,0 +1,106 @@
+# Program
+#include<iostream>
+using namespace std;
+int main()
+{
+int totalThousand=100;
+int totalFiveHundred=100;
+int totalOneHundred=100;
+int totalFifty=100;
+int totalTwenty=100;
+int totalTen=100;
+int totalFive=100;
+int totalTwo=100;
+int totalOne=100;
+int withdrawAmount;
+int totalMoney;
+
+int thousand=0,fiveHundred=0,oneHundred=0,fifty=0,twenty=0,ten=0,five=0,two=0,one=0;
+
+cout<<"Enter the amount in multiple of 1000: "<<endl;
+cin>>withdrawAmount;
+
+if(withdrawAmount %1!= 0){
+cout<<"Invalid amount;"<<endl;
+return 0;
+}
+
+totalMoney=totalThousand*1000+totalFiveHundred*500+totalOneHundred*100+totalFifty*50+totalTwenty*20+totalTen*10+totalFive*5+totalTwo*2+totalOne*1;
+
+if(withdrawAmount>totalMoney){
+cout<<"Sorry,Insufficient money"<<endl;
+return 0;
+}
+if(withdrawAmount>0){
+thousand=withdrawAmount/1000;
+if(thousand>totalThousand)
+thousand=totalThousand;
+withdrawAmount=withdrawAmount-thousand*1000;
+}
+
+if(withdrawAmount>0){
+fiveHundred=withdrawAmount/500;
+if(fiveHundred>totalFiveHundred)
+fiveHundred=totalFiveHundred;
+withdrawAmount=withdrawAmount-fiveHundred*500;
+}
+
+if(withdrawAmount>0)
+oneHundred=withdrawAmount/100;{
+if(oneHundred>totalOneHundred)
+oneHundred=totalOneHundred;
+withdrawAmount=withdrawAmount-oneHundred*100;
+}
+
+if(withdrawAmount>0)
+fifty=withdrawAmount/50;{
+if(fifty>totalFifty)
+fifty=totalFifty;
+withdrawAmount=withdrawAmount-fifty*50;
+}
+
+if(withdrawAmount>0)
+twenty=withdrawAmount/20;{
+if(twenty>totalTwenty)
+twenty=totalTwenty;
+withdrawAmount=withdrawAmount-twenty*20;
+}
+
+if(withdrawAmount>0)
+ten=withdrawAmount/10;{
+if(ten>totalTen)
+ten=totalTen;
+withdrawAmount=withdrawAmount-ten*10;
+}
+
+if(withdrawAmount>0)
+five=withdrawAmount/5;{
+if(five>totalFive)
+five=totalFive;
+withdrawAmount=withdrawAmount-five*5;
+}
+
+if(withdrawAmount>0)
+two=withdrawAmount/2;{
+if(two>totalTwo)
+two=totalTwo;
+withdrawAmount=withdrawAmount-two*2;
+}
+
+if(withdrawAmount>0)
+one=withdrawAmount/1;
+
+cout<<"Total 1000 note: "<<thousand<<endl;
+cout<<"Total 500 note: "<<fiveHundred<<endl;
+cout<<"Total 100 note: "<<oneHundred<<endl;
+cout<<"Total 50 note: "<<fifty<<endl;
+cout<<"Total 20 note: "<<twenty<<endl;
+cout<<"Total 10 note: "<<ten<<endl;
+cout<<"Total 5 note: "<<five<<endl;
+cout<<"Total 2 note: "<<two<<endl;
+cout<<"Total 1 note: "<<one<<endl;
+
+
+return 0;
+
+}
